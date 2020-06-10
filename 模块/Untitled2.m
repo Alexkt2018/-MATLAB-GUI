@@ -1,0 +1,18 @@
+clear all;
+close all;
+clc;
+a=imread('G:\rose.jpg');
+a=rgb2gray(a);
+bw1=edge(a,'sobel');
+bw2=edge(a,'prewitt');
+bw3=edge(a,'roberts');
+bw4=edge(a,'log');
+figure,imshow(a);
+subplot(2,2,1),imshow(bw1);
+xlabel('sobel');
+subplot(2,2,2),imshow(bw2);
+xlabel('prewitt');
+subplot(2,2,3),imshow(bw3);
+xlabel('roberts');
+subplot(2,2,4),imshow(bw4);
+xlabel('log');
